@@ -1,0 +1,11 @@
+.main{
+    display: flex;
+    justify-content: left;
+    margin: 2%;
+  }
+
+.card{
+    width: 18rem;
+    margin-left: 2%;
+    cursor: pointer;
+  }
