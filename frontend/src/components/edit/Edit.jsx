@@ -3,24 +3,32 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast, { Toaster } from 'react-hot-toast';
 
+// Component for editing a book
+// The book to be edited is passed as a prop
 const Edit = ({ book }) => {
+  //State to hold the form fields
   const [fields, setFields] = useState({
     title: "",
     author: "",
     description: "",
   });
-
+  
+  // Function to handle deletion of books
   const handleDelete = async (event) => {
     event.preventDefault();
     try {
       await axios.delete(`http://localhost:3001/api/books/${book._id}`);
+      //Refreshes the page to the current location
       window.location.reload();
     } catch (err) {
       console.log(err);
+      toast.error(err.message)
     }
   };
 
+  // Function to create a new book using the fields data
   const handleCreate = async (event) => {
     event.preventDefault();
     try {
@@ -33,12 +41,14 @@ const Edit = ({ book }) => {
         `http://localhost:3001/api/books/book`, 
         newBook
       );
+      //Refreshes the page to the current location
       window.location.reload();
     } catch (err) {
       console.log(err);
+      toast.error(err.message)
     }
   };
-
+  // Function to update an existing book using the fields data
   const handleSave = async (event) => {
     event.preventDefault();
     try {
@@ -53,10 +63,13 @@ const Edit = ({ book }) => {
       );
       window.location.reload();
     } catch (err) {
-      console.log(err);
+      toast.error(err.message)
     }
   };
 
+  //Updates the field state by creating a new object that contains all the previous values of fields using spread (...prevFields)
+  //The name property is used to determine which fields value attribute to update
+  //Whenever the input fields value changes the handleInput updates the value of fields state
   const handleInput = (event) => {
     const { name, value } = event.target;
     setFields((prevFields) => ({
@@ -65,6 +78,7 @@ const Edit = ({ book }) => {
     }));
   };
 
+  //Used for updating the fields state with the clicked (active) books data to the form
   useEffect(() => {
     setFields({
       title: book.title,
@@ -75,6 +89,7 @@ const Edit = ({ book }) => {
 
   return (
     <div className="form">
+      <Toaster />
       <Form className="form">
         <Form.Group>
           <Form.Label>Title</Form.Label>

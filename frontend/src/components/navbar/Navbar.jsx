@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../assets/bookstack.svg'
 
+//Simple navbar for the page
 const Navigation = () => {
     return (
         <>

@@ -5,11 +5,17 @@ import { useState } from "react";
 import Edit from "../edit/Edit";
 
 const Books = () => {
-  //If you changed the servers port in the backend side change it back here. If your backend is running on port 3001 this will work.
+  //useFetch is a custom hook that fetches all the books from the backend. Later we use the data.map to display each book.
   const { data, loading } = useFetch("http://localhost:3001/api/books/");
+
+  //showForm state to display a form when a book is clicked
   const [showForm, setShowForm] = useState(false);
+
+  //selectedBook state that is used to pass down the book property to the Edit component. 
+  //We can use it to display a specific books data and getting a specific books _id for updating and deleting.
   const [selectedBook, setSelectedBook] = useState(null);
 
+  //Function that sets the useStates. 'item' is used to grab the data in the book object.
   const handleClick = (book) => {
     setSelectedBook(book);
     setShowForm(true);
