@@ -3,7 +3,6 @@ import {
     createBook,
     updateBook,
     deleteBook,
-    getBook,  
     getBooks 
 } from "../controllers/Book.js";
 const router = express.Router();
@@ -16,8 +15,6 @@ router.post("/book", createBook);
 router.put("/:id", updateBook);
 //DELETE
 router.delete("/:id", deleteBook);
-//GET 
-router.get("/find/:id", getBook);
 //GET ALL
 router.get("/", getBooks);
 

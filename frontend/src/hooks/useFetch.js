@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios";
 
-//This function is used for getting all the books
+//This custom hook is used for displaying all the books on the page
 const useFetch = (url) =>{
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
@@ -20,19 +20,7 @@ const useFetch = (url) =>{
         };
     fetchData();
     }, [url])
-
-
-const reFetch = async () => {
-    setLoading(true)
-    try {
-        const res = await axios.get(url)
-        setData(res.data)
-    } catch (err) {
-        setError(err)
-    }
-    setLoading(false)
-    };
-    return {data, loading, error, reFetch}
+    return {data, loading, error}
 };
 
 export default useFetch;

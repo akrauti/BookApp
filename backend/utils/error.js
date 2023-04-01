@@ -1,4 +1,4 @@
-//Error handling for every functionality in the website.
+//Used for error handling in the website
 export const createError =  (status, message) => {
     const err = new Error();
     err.status = status;
