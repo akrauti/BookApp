@@ -18,7 +18,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently --kill-others \"npm ci && react-scripts start\" \"cd ../backend && npm ci && npm start\"",
+    "start": "npm ci && concurrently --kill-others \"react-scripts start\" \"cd ../backend && npm ci && npm start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
