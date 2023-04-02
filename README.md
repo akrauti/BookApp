@@ -8,9 +8,6 @@ The main goal and inspiration for this project was simplicity. I wanted to creat
 ## Dependencies
 [Node version 18.15](https://nodejs.org/en/download)
 
-[MongoDB  Atlas](https://www.mongodb.com/atlas/database)
-
-
 
 ## Installation
 
