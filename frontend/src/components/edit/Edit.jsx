@@ -95,7 +95,7 @@ const Edit = ({ book }) => {
           <Form.Label>Title</Form.Label>
           <Form.Control
             type="text"
-            placeholder="title"
+            placeholder="Title"
             name="title"
             value={fields.title}
             onChange={handleInput}
@@ -109,7 +109,7 @@ const Edit = ({ book }) => {
           <Form.Label>Author</Form.Label>
           <Form.Control
             type="text"
-            placeholder="author"
+            placeholder="Author"
             name="author"
             value={fields.author}
             onChange={handleInput}
@@ -125,7 +125,7 @@ const Edit = ({ book }) => {
             as="textarea"
             rows={3}
             type="text"
-            placeholder="description"
+            placeholder="Description"
             name="description"
             value={fields.description}
             onChange={handleInput}

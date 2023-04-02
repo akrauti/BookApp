@@ -26,7 +26,7 @@ export const createBook = async (req,res,next)=>{
 //Controller for updating a book.
 export const updateBook = async (req, res, next) => {
     try {
-        
+
         //Checks for empty values so you cannot update the books title or author to be empty
       if (!req.body.title || !req.body.author) {
         return next(createError(400, "Title and author fields are required"));
@@ -44,8 +44,6 @@ export const updateBook = async (req, res, next) => {
 export const deleteBook = async (req,res,next)=>{       
     try {
         await Book.findByIdAndDelete(req.params.id)
-        if (!Book)
-         return next(createError(404, "Not found"))
         res.status(200).json("Book deleted")
     } catch(err) {
         next(err);
