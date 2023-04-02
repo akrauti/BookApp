@@ -41,7 +41,11 @@ const Books = () => {
           ))}
         </>
       )}
-      {showForm && <Edit book={selectedBook} />}
+      {showForm && ( 
+      <div className="edit">
+        <Edit book={selectedBook} />
+      </div>
+      )}
     </div>
   );
 };

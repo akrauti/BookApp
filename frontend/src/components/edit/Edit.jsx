@@ -88,10 +88,10 @@ const Edit = ({ book }) => {
   }, [book]);
 
   return (
-    <div className="form">
+    <div>
       <Toaster />
       <Form className="form">
-        <Form.Group>
+        <Form.Group className="formField">
           <Form.Label>Title</Form.Label>
           <Form.Control
             type="text"
@@ -100,12 +100,12 @@ const Edit = ({ book }) => {
             value={fields.title}
             onChange={handleInput}
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="subtext">
             Edit or insert the title of the book!
           </Form.Text>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="formField">
           <Form.Label>Author</Form.Label>
           <Form.Control
             type="text"
@@ -114,12 +114,12 @@ const Edit = ({ book }) => {
             value={fields.author}
             onChange={handleInput}
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="subtext">
             Edit or insert the author of the book!
           </Form.Text>
         </Form.Group>
 
-        <Form.Group>
+        <Form.Group className="formField">
           <Form.Label>Description</Form.Label>
           <Form.Control
             as="textarea"
@@ -130,18 +130,18 @@ const Edit = ({ book }) => {
             value={fields.description}
             onChange={handleInput}
           />
-          <Form.Text className="text-muted">
+          <Form.Text className="subtext">
             Edit or insert the description of the book!
           </Form.Text>
         </Form.Group>
 
-        <Button variant="primary" onClick={handleCreate} type="submit">
+        <Button variant="primary" className="createButton" onClick={handleCreate} type="submit">
           Save new
         </Button>
-        <Button variant="primary" onClick={handleSave} type="submit">
+        <Button variant="primary" className="button" onClick={handleSave} type="submit">
           Save
         </Button>
-        <Button variant="primary" onClick={handleDelete} type="submit">
+        <Button variant="primary" className="button" onClick={handleDelete} type="submit">
           Delete
         </Button>
       </Form>

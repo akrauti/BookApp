@@ -1,3 +1,31 @@
-.form{
-    background-color: aliceblue;
+.form {
+    background-color: #c2bdbb;
+    width: 30rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
+
+.createButton {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.button {
+    background-color: #212529 !important;
+    border-color: #212529 !important;
+    margin-left: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.2rem;
+}
+
+.subtext {
+    color: #3f3f3f !important;
+}
+
+.formField {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }

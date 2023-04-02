@@ -1,11 +1,15 @@
-.main{
+.main {
     display: flex;
+    flex-wrap: wrap;
     justify-content: left;
-    margin: 2%;
-  }
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
 
-.card{
+.card {
     width: 18rem;
-    margin-left: 2%;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    max-height: 5rem;
     cursor: pointer;
-  }
+}
