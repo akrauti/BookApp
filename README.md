@@ -6,6 +6,7 @@ The main goal and inspiration for this project was simplicity. I wanted to creat
 
 
 ## Dependencies
+Needs to be installed on your computer for the application to work
 [Node version 18.15](https://nodejs.org/en/download)
 
 
