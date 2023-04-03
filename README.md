@@ -8,13 +8,10 @@ The main goal and inspiration for this project was simplicity. I wanted to creat
 ## Dependencies
 [Node version 18.15](https://nodejs.org/en/download)
 
-[MongoDB  Atlas](https://www.mongodb.com/atlas/database)
-
-
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com/) to install the contents of both the frontend folder and backend folder and start the application with a single command.
+The application uses the package manager [npm](https://www.npmjs.com/) to install the contents of both the frontend folder and backend folder and start the application with a single command. You need Node for this and it is linked above in the dependencies. Running the npm start command might take a while so be patient!
 
 ```bash
 
